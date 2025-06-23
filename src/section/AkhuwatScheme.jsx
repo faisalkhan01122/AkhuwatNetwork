@@ -1,82 +1,41 @@
-// // src/components/AkhuwatScheme.jsx
-// import React from "react";
-// import { motion } from "framer-motion";
 
-// const AkhuwatScheme = () => {
-//   return (
-//     <section className="py-10 bg-white">
-//       <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-start gap-10">
-//         {/* Image */}
-//         <motion.div
-//           className="md:w-1/2"
-//           initial={{ opacity: 0, x: -50 }}
-//           whileInView={{ opacity: 1, x: 0 }}
-//           transition={{ duration: 0.6 }}
-//           viewport={{ once: true }}
-//         >
-//           <img
-//             src="https://i.postimg.cc/xCChTh36/akhuwatfoundationhome.jpg"
-//             alt="Akhuwat Scheme"
-//             className="rounded-lg shadow-lg w-full"
-//           />
-//         </motion.div>
 
-//         {/* Text */}
-//         <motion.div
-//           className="md:w-1/2 pt-10"
-//           initial={{ opacity: 0, x: 50 }}
-//           whileInView={{ opacity: 1, x: 0 }}
-//           transition={{ duration: 0.6, delay: 0.2 }}
-//           viewport={{ once: true }}
-//         >
-//           <h2 className="text-3xl md:text-4xl  font-bold text-green-600 mb-4">
-//             Akhuwat Loan Scheme 2025
-//           </h2>
-//           <p className="text-gray-700 text-xl leading-relaxed">
-//             Akhuwat Loan Service stands out as a unique loan provider in
-//             Pakistan, offering ethical, interest-free loans (Qarz-e-Hasna)
-//             designed to uplift those in need. Unlike conventional banks, Akhuwat
-//             prioritizes social welfare over profit.
-//           </p>
-//         </motion.div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default AkhuwatScheme;
-
-import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+// import "./AkhuwatScheme.css" // Assuming you have a CSS file for styles
+import { useEffect, useState } from "react"
+import { motion } from "framer-motion"
 
 const features = [
   { icon: "✅", title: "Interest-Free", desc: "100% Sharia-compliant loans" },
   { icon: "👥", title: "Community-Based", desc: "Supporting local communities" },
   { icon: "❤️", title: "Social Welfare", desc: "Prioritizing people over profit" },
   { icon: "📈", title: "Quick Approval", desc: "Fast processing and disbursement" },
-];
+]
 
 const AkhuwatScheme = () => {
-  // State to detect if screen is small, to adjust animation
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false)
 
   useEffect(() => {
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < 640); // Tailwind's sm breakpoint
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+      setIsSmallScreen(window.innerWidth < 640)
+    }
+    handleResize()
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4">
+    <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-green-50 relative overflow-hidden">
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 left-10 w-40 h-40 bg-green-400 rounded-full animate-float"></div>
+        <div className="absolute bottom-32 right-20 w-32 h-32 bg-blue-400 rounded-full animate-float-reverse"></div>
+        <div className="absolute top-1/2 left-1/3 w-20 h-20 bg-purple-400 rounded-full animate-pulse"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Image */}
           <motion.div
             className="relative"
-            initial={{ opacity: 0, x: isSmallScreen ? 0 : -50 }} // no horizontal slide on small
+            initial={{ opacity: 0, x: isSmallScreen ? 0 : -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -85,26 +44,25 @@ const AkhuwatScheme = () => {
               <motion.img
                 src="https://i.postimg.cc/xCChTh36/akhuwatfoundationhome.jpg"
                 alt="Akhuwat Scheme"
-                className="w-full h-[400px] sm:h-[500px] object-cover"
-                whileHover={isSmallScreen ? {} : { scale: 1.05 }} // disable hover zoom on small
+                className="w-full h-[400px] sm:h-[500px] object-contain"
+                whileHover={isSmallScreen ? {} : { scale: 1.05 }}
                 transition={{ duration: 0.6 }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
 
-              {/* Floating Stats */}
               <motion.div
                 className="absolute top-6 right-6 bg-white/90 backdrop-blur-sm rounded-xl p-4 shadow-lg glass"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
                 viewport={{ once: true }}
-                whileHover={isSmallScreen ? {} : { scale: 1.1 }} // no hover zoom on mobile
+                whileHover={isSmallScreen ? {} : { scale: 1.1 }}
               >
                 <div className="text-center">
                   <motion.div
                     className="text-2xl font-bold text-green-600"
                     animate={{ scale: [1, 1.1, 1] }}
-                    transition={{ duration: 2, repeat: Infinity }}
+                    transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
                   >
                     50L+
                   </motion.div>
@@ -124,7 +82,7 @@ const AkhuwatScheme = () => {
                   <motion.div
                     className="text-2xl font-bold text-green-600"
                     animate={{ scale: [1, 1.1, 1] }}
-                    transition={{ duration: 2, repeat: Infinity, delay: 1 }}
+                    transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, delay: 1 }}
                   >
                     0%
                   </motion.div>
@@ -134,7 +92,6 @@ const AkhuwatScheme = () => {
             </div>
           </motion.div>
 
-          {/* Content */}
           <motion.div
             className="space-y-8"
             initial={{ opacity: 0, x: isSmallScreen ? 0 : 50 }}
@@ -169,14 +126,12 @@ const AkhuwatScheme = () => {
                 transition={{ delay: 0.4, duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                Akhuwat Loan Service stands out as a unique loan provider in Pakistan,
-                offering ethical, interest-free loans (Qarz-e-Hasna) designed to uplift
-                those in need. Unlike conventional banks, Akhuwat prioritizes social
-                welfare over profit.
+                Akhuwat Loan Service stands out as a unique loan provider in Pakistan, offering ethical, interest-free
+                loans (Qarz-e-Hasna) designed to uplift those in need. Unlike conventional banks, Akhuwat prioritizes
+                social welfare over profit.
               </motion.p>
             </div>
 
-            {/* Features Grid */}
             <div className="grid sm:grid-cols-2 gap-6">
               {features.map((feature, index) => (
                 <motion.div
@@ -203,7 +158,6 @@ const AkhuwatScheme = () => {
               ))}
             </div>
 
-            {/* CTA Button */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -222,7 +176,7 @@ const AkhuwatScheme = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default AkhuwatScheme;
+export default AkhuwatScheme
