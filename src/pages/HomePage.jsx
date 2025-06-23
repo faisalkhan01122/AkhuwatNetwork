@@ -10,23 +10,29 @@ import AkhuwatLoanSection from '../section/AkhuwatLoanSection'
 import AkhuwatTrustSection from '../section/AkhuwatTrustSection'
 import ApplyLoanSteps from '../section/ApplyLoanSteps'
 import LoanSchemeSection from '../section/LoanSchemeSection'
+import FaqSection from '../section/FaqSection'
+import AboutSection from '../section/AboutSection'
+import ServicesCarousel from '../section/ServicesCarousel'
 
 const HomePage = () => {
   return (
     <div>
         <HeroSection/>
         <FooterBar/>
-        {/* <AkhuwatScheme/> */}
+        <AkhuwatScheme/>
         <LoanInt/>
         <OurServices/>
         <h1 className='text-3xl font-bold text-center pt-5 text-[#22C55E]'>AKHUWAT LOAN HELPLINE NUMBER 2025</h1>
-         {/* <AkhuwatScheme/> */}
+         <AkhuwatScheme/>
          <LoanSection/>
          <LoanCardSection/>
          <AkhuwatLoanSection/>
          <AkhuwatTrustSection/>
          <ApplyLoanSteps/>
          <LoanSchemeSection/>
+         <FaqSection/>
+         <AboutSection/>
+         <ServicesCarousel/>
     </div>
   )
 }

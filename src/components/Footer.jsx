@@ -7,7 +7,7 @@ const Footer = () => {
         {/* Logo Section */}
         <div className="flex flex-col min-w-[180px]">
           <img
-            src="https://akhuwat.network/images/akhuwatfundslogo.png"
+            src="/akhuwatfundslogo.png"
             alt="Akhuwat Logo"
             className="w-28 bg-white rounded-full p-2 mb-3 shadow-md"
           />
@@ -21,13 +21,13 @@ const Footer = () => {
         <div className="min-w-[180px] mt-2">
           <ul className="space-y-3">
             {[
-              { name: 'Home', href: 'https://akhuwat.network' },
-              { name: 'Akhuwat Loan Services', href: 'https://akhuwat.network/loan-services' },
-              { name: 'About Us', href: 'https://akhuwat.network/about-us' },
-              { name: 'Privacy Policy', href: 'https://akhuwat.network/privacy-policy' },
-              { name: 'Terms & Conditions', href: 'https://akhuwat.network/terms-and-conditions' },
-              { name: 'Disclaimer', href: 'https://akhuwat.network/disclaimer' },
-              { name: 'Contact Us', href: 'https://akhuwat.network/contact-us' },
+              { name: 'Home', href: '/' },
+              { name: 'Akhuwat Loan Services', href: 'loan-services' },
+              { name: 'About Us', href: 'about-us' },
+              { name: 'Privacy Policy', href: 'privacy-policy' },
+              { name: 'Terms & Conditions', href: 'terms-and-conditions' },
+              { name: 'Disclaimer', href: 'disclaimer' },
+              { name: 'Contact Us', href: 'contact-us' },
             ].map((item, index) => (
               <li key={index}>
                 <a

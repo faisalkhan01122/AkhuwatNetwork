@@ -91,13 +91,13 @@ const Navbar = () => {
       <div className="flex justify-between items-center px-4 py-3 max-w-7xl mx-auto">
         {/* Logo */}
         <motion.a
-          href="https://akhuwat.network"
+          href="/"
           className="flex-shrink-0"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
           <img
-            src="https://akhuwat.network/images/akhuwatfundslogo.png"
+            src="/akhuwatfundslogo.png"
             alt="Akhuwat Foundation Logo"
             className="h-12 w-auto hover-scale"
           />
