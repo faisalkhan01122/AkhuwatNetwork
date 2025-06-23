@@ -70,7 +70,7 @@ const causes = [
     category: "Healthcare",
     description:
       "Akhuwat is dedicated to providing accessible and high-quality healthcare to underserved communities through specialized medical services.",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=300&fit=crop",
+    image: "https://www.citysearch.pk/UF/Companies/11460/heath-care-services.jpg",
     icon: <FaMedkit />,
     color: "from-red-500 to-pink-600",
     raised: "₨1.5M",

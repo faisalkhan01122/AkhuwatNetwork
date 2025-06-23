@@ -16,7 +16,7 @@ const FooterBar = () => {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
-        <FaWhatsapp className="text-white text-base sm:text-lg md:text-xl group-hover:animate-bounce" />
+        <FaWhatsapp className="text-white text-base sm:text-lg md:text-4xl group-hover:animate-bounce" />
         <motion.div
           className="absolute -top-8 sm:-top-10 left-1/2 -translate-x-1/2 bg-black/80 backdrop-blur text-white text-[9px] sm:text-xs px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap"
           initial={{ y: 5 }}
@@ -36,14 +36,14 @@ const FooterBar = () => {
       {/* Call Icon */}
       <motion.a
         href="tel:+923334576120"
-        className="fixed bottom-3 right-3 z-50 bg-blue-500 hover:bg-blue-600 p-1.5 sm:p-2.5 md:p-3 rounded-full shadow-xl transition-all duration-300 group"
+        className="fixed bottom-3 right-5 z-50 bg-blue-500 hover:bg-blue-600 p-1.5 sm:p-2.5 md:p-3 rounded-full shadow-xl transition-all duration-300 group"
         initial={{ scale: 0, rotate: 180 }}
         animate={{ scale: 1, rotate: 0 }}
         transition={{ delay: 1, duration: 0.6, type: "spring" }}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
-        <FaPhone className="text-white text-base sm:text-lg md:text-xl group-hover:animate-pulse" />
+        <FaPhone className="text-white text-base sm:text-lg md:text-4xl group-hover:animate-pulse" />
         <motion.div
           className="absolute -top-8 sm:-top-10 left-1/2 -translate-x-1/2 bg-black/80 backdrop-blur text-white text-[9px] sm:text-xs px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap"
           initial={{ y: 5 }}
