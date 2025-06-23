@@ -45,17 +45,30 @@
 // };
 
 // export default AkhuwatScheme;
-"use client"
-import { motion } from "framer-motion"
+
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 const features = [
   { icon: "✅", title: "Interest-Free", desc: "100% Sharia-compliant loans" },
   { icon: "👥", title: "Community-Based", desc: "Supporting local communities" },
   { icon: "❤️", title: "Social Welfare", desc: "Prioritizing people over profit" },
   { icon: "📈", title: "Quick Approval", desc: "Fast processing and disbursement" },
-]
+];
 
 const AkhuwatScheme = () => {
+  // State to detect if screen is small, to adjust animation
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 640); // Tailwind's sm breakpoint
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
@@ -63,7 +76,7 @@ const AkhuwatScheme = () => {
           {/* Image */}
           <motion.div
             className="relative"
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: isSmallScreen ? 0 : -50 }} // no horizontal slide on small
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -72,8 +85,8 @@ const AkhuwatScheme = () => {
               <motion.img
                 src="https://i.postimg.cc/xCChTh36/akhuwatfoundationhome.jpg"
                 alt="Akhuwat Scheme"
-                className="w-full h-[500px] object-cover"
-                whileHover={{ scale: 1.05 }}
+                className="w-full h-[400px] sm:h-[500px] object-cover"
+                whileHover={isSmallScreen ? {} : { scale: 1.05 }} // disable hover zoom on small
                 transition={{ duration: 0.6 }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
@@ -85,13 +98,13 @@ const AkhuwatScheme = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
                 viewport={{ once: true }}
-                whileHover={{ scale: 1.1 }}
+                whileHover={isSmallScreen ? {} : { scale: 1.1 }} // no hover zoom on mobile
               >
                 <div className="text-center">
                   <motion.div
                     className="text-2xl font-bold text-green-600"
                     animate={{ scale: [1, 1.1, 1] }}
-                    transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
+                    transition={{ duration: 2, repeat: Infinity }}
                   >
                     50L+
                   </motion.div>
@@ -105,13 +118,13 @@ const AkhuwatScheme = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.7, duration: 0.6 }}
                 viewport={{ once: true }}
-                whileHover={{ scale: 1.1 }}
+                whileHover={isSmallScreen ? {} : { scale: 1.1 }}
               >
                 <div className="text-center">
                   <motion.div
                     className="text-2xl font-bold text-green-600"
                     animate={{ scale: [1, 1.1, 1] }}
-                    transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, delay: 1 }}
+                    transition={{ duration: 2, repeat: Infinity, delay: 1 }}
                   >
                     0%
                   </motion.div>
@@ -124,14 +137,14 @@ const AkhuwatScheme = () => {
           {/* Content */}
           <motion.div
             className="space-y-8"
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: isSmallScreen ? 0 : 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
             <div>
               <motion.h2
-                className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+                className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
@@ -150,15 +163,16 @@ const AkhuwatScheme = () => {
               </motion.h2>
 
               <motion.p
-                className="text-lg text-gray-600 leading-relaxed mb-8"
+                className="text-base sm:text-lg text-gray-600 leading-relaxed mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                Akhuwat Loan Service stands out as a unique loan provider in Pakistan, offering ethical, interest-free
-                loans (Qarz-e-Hasna) designed to uplift those in need. Unlike conventional banks, Akhuwat prioritizes
-                social welfare over profit.
+                Akhuwat Loan Service stands out as a unique loan provider in Pakistan,
+                offering ethical, interest-free loans (Qarz-e-Hasna) designed to uplift
+                those in need. Unlike conventional banks, Akhuwat prioritizes social
+                welfare over profit.
               </motion.p>
             </div>
 
@@ -172,11 +186,11 @@ const AkhuwatScheme = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5 + index * 0.1, duration: 0.6 }}
                   viewport={{ once: true }}
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={isSmallScreen ? {} : { scale: 1.05 }}
                 >
                   <motion.div
                     className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center text-xl"
-                    whileHover={{ rotate: 360 }}
+                    whileHover={isSmallScreen ? {} : { rotate: 360 }}
                     transition={{ duration: 0.6 }}
                   >
                     {feature.icon}
@@ -198,7 +212,7 @@ const AkhuwatScheme = () => {
             >
               <motion.button
                 className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse-glow"
-                whileHover={{ scale: 1.05 }}
+                whileHover={isSmallScreen ? {} : { scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 Apply Now
@@ -208,7 +222,7 @@ const AkhuwatScheme = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default AkhuwatScheme
+export default AkhuwatScheme;
