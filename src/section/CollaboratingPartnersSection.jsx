@@ -94,53 +94,63 @@ const CollaboratingPartnersSection = () => {
           </motion.p>
         </motion.div>
 
-        {/* Partners Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-16">
-          {partners.map((partner, index) => (
-            <motion.div
-              key={partner.id}
-              className="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover-lift text-center"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1, duration: 0.6 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -10 }}
-            >
-              {/* Logo */}
-              <motion.div
-                className="mb-4 overflow-hidden rounded-xl"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              >
-                <img
-                  src={partner.logo || "/placeholder.svg"}
-                  alt={partner.name}
-                  className="w-full h-16 object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                />
-              </motion.div>
+     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-20">
+  {partners.map((partner, index) => (
+    <motion.div
+      key={partner.id}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.1, duration: 0.6 }}
+      viewport={{ once: true }}
+      whileHover={{ scale: 1.05, rotateX: 2, rotateY: 2 }}
+      className="group relative bg-white/80 backdrop-blur-xl border border-gray-200 rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-green-300 transition-all duration-500 text-center p-6 overflow-hidden"
+    >
+      {/* Glow Background */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-green-100 via-white to-blue-100 opacity-10 blur-2xl rounded-2xl pointer-events-none" />
 
-              {/* Content */}
-              <motion.h3
-                className="text-lg font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors duration-300"
-                whileHover={{ x: 2 }}
-              >
-                {partner.name}
-              </motion.h3>
+      {/* Floating Glow Dot */}
+      <div className="absolute -top-4 -left-4 w-16 h-16 bg-green-400 rounded-full opacity-30 blur-2xl animate-pulse pointer-events-none"></div>
 
-              <p className="text-sm text-gray-600 mb-3 leading-relaxed">{partner.description}</p>
+      {/* Partner Logo */}
+      <motion.div
+        className="flex justify-center items-center h-20 mb-4"
+        animate={{ y: [0, -5, 0] }}
+        transition={{ repeat: Infinity, duration: 4 }}
+      >
+        <img
+          src={partner.logo}
+          alt={partner.name}
+          className="h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-500"
+        />
+      </motion.div>
 
-              {/* Hover Details */}
-              <motion.div
-                className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                initial={{ height: 0 }}
-                whileInView={{ height: "auto" }}
-                transition={{ delay: 0.2 }}
-              >
-                <p className="text-xs text-green-600 font-semibold">{partner.fullName}</p>
-              </motion.div>
-            </motion.div>
-          ))}
-        </div>
+      {/* Title */}
+      <motion.h3
+        className="text-lg font-bold text-gray-800 mb-2 transition-colors duration-300 group-hover:text-green-600"
+        whileHover={{ scale: 1.05 }}
+      >
+        {partner.name}
+      </motion.h3>
+
+      {/* Description */}
+      <p className="text-sm text-gray-600 mb-3 leading-relaxed min-h-[60px]">
+        {partner.description}
+      </p>
+
+      {/* Full Name (on hover reveal) */}
+      <motion.div
+        className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        initial={{ height: 0 }}
+        animate={{ height: "auto" }}
+      >
+        <p className="text-xs text-green-700 font-semibold italic">
+          {partner.fullName}
+        </p>
+      </motion.div>
+    </motion.div>
+  ))}
+</div>
+
 
         {/* Partnership Benefits */}
         <motion.div

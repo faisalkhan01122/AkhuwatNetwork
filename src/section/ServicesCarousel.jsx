@@ -33,7 +33,7 @@ const ServicesCarousel = () => {
     infinite: true,
     autoplay: true,
     speed: 600,
-    autoplaySpeed: 2500,
+    autoplaySpeed: 3000,
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: false,
@@ -48,18 +48,22 @@ const ServicesCarousel = () => {
       },
     ],
     customPaging: () => (
-      <div className="w-2 h-2 bg-gray-400 rounded-full mx-1"></div>
+      <div className="w-3 h-3 bg-gray-400 rounded-full mx-1 transition-all duration-300"></div>
     ),
     appendDots: (dots) => (
-      <div className="flex justify-center mt-6">{dots}</div>
+      <div className="flex justify-center mt-6 space-x-1">{dots}</div>
     ),
   };
 
   return (
-    <section className="py-16 bg-gray-100">
-      <div className="max-w-6xl mx-auto px-4">
+    <section className="py-20 bg-gradient-to-br from-white via-green-50 to-blue-50 relative overflow-hidden">
+      {/* Background blur dots */}
+      <div className="absolute top-10 left-10 w-32 h-32 bg-green-300 opacity-20 rounded-full blur-2xl z-0"></div>
+      <div className="absolute bottom-10 right-10 w-24 h-24 bg-blue-400 opacity-20 rounded-full blur-2xl z-0"></div>
+
+      <div className="max-w-6xl mx-auto px-4 relative z-10">
         <motion.h2
-          className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-10"
+          className="text-4xl sm:text-5xl font-bold text-center text-gray-800 mb-12"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -78,12 +82,16 @@ const ServicesCarousel = () => {
               transition={{ delay: index * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <div className="overflow-hidden rounded-xl shadow-lg bg-white hover:shadow-xl transition duration-300">
+              <div className="relative overflow-hidden rounded-2xl shadow-xl bg-white hover:shadow-2xl transition duration-500 group">
                 <img
                   src={service.src}
                   alt={service.alt}
-                  className="w-full h-64 object-cover"
+                  className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500"
                 />
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition duration-300"></div>
+                <div className="absolute bottom-4 left-4 text-white bg-green-600 px-3 py-1 rounded-md text-sm font-medium shadow-md group-hover:bg-green-700 transition-all duration-300">
+                  {service.alt}
+                </div>
               </div>
             </motion.div>
           ))}
