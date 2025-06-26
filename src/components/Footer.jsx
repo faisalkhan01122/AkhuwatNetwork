@@ -1,4 +1,6 @@
+// src/components/Footer.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -22,20 +24,20 @@ const Footer = () => {
           <ul className="space-y-3">
             {[
               { name: 'Home', href: '/' },
-              { name: 'Akhuwat Loan Services', href: 'loan-services' },
-              { name: 'About Us', href: 'about-us' },
-              { name: 'Privacy Policy', href: 'privacy-policy' },
-              { name: 'Terms & Conditions', href: 'terms-and-conditions' },
-              { name: 'Disclaimer', href: 'disclaimer' },
-              { name: 'Contact Us', href: 'contact-us' },
+              { name: 'Akhuwat Loan Services', href: '/loan-services' },
+              { name: 'About Us', href: '/about-us' },
+              { name: 'Privacy Policy', href: '/privacy-policy' },
+              { name: 'Terms & Conditions', href: '/terms-and-conditions' },
+              { name: 'Disclaimer', href: '/disclaimer' },
+              { name: 'Contact Us', href: '/contact-us' },
             ].map((item, index) => (
               <li key={index}>
-                <a
-                  href={item.href}
+                <Link
+                  to={item.href}
                   className="text-white text-lg font-medium border-b-2 border-transparent hover:border-white transition"
                 >
                   {item.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -62,7 +64,7 @@ const Footer = () => {
           </div>
           <div className="text-sm leading-6">
             <strong>Address</strong><br />
-            Mobile: +92 335 4571620<br />
+            Mobile: +92 328 1969250<br />
             Email:{' '}
             <a href="mailto:support@akhuwat.network" className="underline">
               support@akhuwat.network

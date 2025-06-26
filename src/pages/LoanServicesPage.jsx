@@ -16,7 +16,7 @@ const LoanServicesPage = () => {
   return (
     <>
       <HeroImgSection
-        imageUrl="https://i.postimg.cc/zGZsSdqf/akhuwatfoundationbusinessloan3.jpg"
+        imageUrl="/loan.webp"
         text="Akhuwat Loan Services"
       />
       <FooterBar />

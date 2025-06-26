@@ -1,60 +1,3 @@
-// import React, { useState } from 'react';
-
-// const Navbar = () => {
-//   const [isOpen, setIsOpen] = useState(false);
-
-//   return (
-//     <header className="w-full bg-white shadow-md fixed top-0 left-0 z-50">
-//       <div className="flex justify-between items-center px-4 py-3 max-w-7xl mx-auto">
-//         {/* Logo */}
-//         <a href="/" className="flex-shrink-0">
-//           <img
-//             src="https://akhuwat.network/images/akhuwatfundslogo.png"
-//             alt="Akhuwat Logo"
-//             className="h-12"
-//           />
-//         </a>
-
-//         {/* Hamburger Menu */}
-//         <button
-//           onClick={() => setIsOpen(!isOpen)}
-//           className="md:hidden focus:outline-none"
-//           aria-label="Toggle menu"
-//         >
-//           <span className="block w-6 h-0.5 bg-black mb-1 transition-all duration-300"></span>
-//           <span className="block w-6 h-0.5 bg-black mb-1 transition-all duration-300"></span>
-//           <span className="block w-6 h-0.5 bg-black transition-all duration-300"></span>
-//         </button>
-
-//         {/* Nav Links */}
-//         <nav
-//           className={`${
-//             isOpen ? 'block' : 'hidden'
-//           } absolute md:static top-full left-0 w-full md:w-auto md:flex bg-white md:bg-transparent md:items-center md:space-x-8 px-4 md:px-0 py-3 md:py-0 shadow md:shadow-none z-40`}
-//         >
-//           {[
-//             { name: 'Home', link: '' },
-//             { name: 'Akhuwat Loan Services', link: 'loan-services' },
-//             { name: 'About Us', link: 'about-us' },
-//             { name: 'Privacy Policy', link: 'privacy-policy' },
-//             { name: 'Contact Us', link: 'contact-us' },
-//           ].map((item) => (
-//             <a
-//               key={item.name}
-//               href={item.link}
-//               className="block md:inline-block text-gray-800 font-medium text-lg py-2 md:py-0 hover:border-b-2 hover:border-gray-800 transition-all duration-200"
-//             >
-//               {item.name}
-//             </a>
-//           ))}
-//         </nav>
-//       </div>
-//     </header>
-//   );
-// };
-
-// export default Navbar;
-"use client"
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
@@ -72,11 +15,11 @@ const Navbar = () => {
   }, [])
 
   const navItems = [
-    { name: "Home", link: "" },
-    { name: "Akhuwat Loan Services", link: "loan-services" },
-    { name: "About Us", link: "about-us" },
-    { name: "Privacy Policy", link: "privacy-policy" },
-    { name: "Contact Us", link: "contact-us" },
+    { name: "Home", link: "/" },
+    { name: "Akhuwat Loan Services", link: "/loan-services" },
+    { name: "About Us", link: "/about-us" },
+    { name: "Privacy Policy", link: "/privacy-policy" },
+    { name: "Contact Us", link: "/contact-us" },
   ]
 
   return (
@@ -123,7 +66,7 @@ const Navbar = () => {
         {/* Call Button & Mobile Menu */}
         <div className="flex items-center gap-4">
           <motion.a
-            href="tel:+923354571620"
+            href="tel:+923281969250"
             className="hidden md:flex bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-2 rounded-full transition-all duration-300 items-center gap-2 hover-scale"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -186,7 +129,7 @@ const Navbar = () => {
                 className="pt-4 border-t border-gray-200"
               >
                 <a
-                  href="tel:+923354571620"
+                  href="tel:+92 328 1969250"
                   className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 flex items-center justify-center gap-2 hover-scale"
                 >
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">

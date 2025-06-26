@@ -8,7 +8,7 @@ const teamMembers = [
     id: 1,
     name: "Dr. Amjad Saqib",
     role: "The Founder",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face",
+    image: "/images.jpg",
     bio: "Visionary leader who founded Akhuwat with the mission to eliminate poverty through interest-free microfinance.",
     social: {
       linkedin: "#",
@@ -20,7 +20,7 @@ const teamMembers = [
     id: 2,
     name: "Mr. Azhar Hameed",
     role: "Global President",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face",
+    image: "/Blog2.jpg",
     bio: "Leading global operations and strategic partnerships to expand Akhuwat's reach worldwide.",
     social: {
       linkedin: "#",
@@ -32,7 +32,7 @@ const teamMembers = [
     id: 3,
     name: "Dr. Nauman Mufti",
     role: "President",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop&crop=face",
+    image: "/numan.jpg",
     bio: "Overseeing organizational development and ensuring sustainable growth of our programs.",
     social: {
       linkedin: "#",
@@ -44,7 +44,7 @@ const teamMembers = [
     id: 4,
     name: "Mr. Asim Ashary",
     role: "Director",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&h=200&fit=crop&crop=face",
+    image: "/yuman-p-300x300.jpg",
     bio: "Managing operational excellence and program implementation across all regions.",
     social: {
       linkedin: "#",
@@ -52,42 +52,42 @@ const teamMembers = [
       email: "asim@akhuwat.org",
     },
   },
-  {
-    id: 5,
-    name: "Mr. Yuman Pirzada",
-    role: "Director",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop&crop=face",
-    bio: "Leading financial operations and ensuring transparency in all our lending processes.",
-    social: {
-      linkedin: "#",
-      twitter: "#",
-      email: "yuman@akhuwat.org",
-    },
-  },
-  {
-    id: 6,
-    name: "Mr. Shahid Jamil",
-    role: "Ambassador, Maryland",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face",
-    bio: "Representing Akhuwat in Maryland and building community partnerships in the region.",
-    social: {
-      linkedin: "#",
-      twitter: "#",
-      email: "shahid@akhuwat.org",
-    },
-  },
-  {
-    id: 7,
-    name: "Mr. Mian Mushtaq Javed",
-    role: "Ambassador, New York & Florida",
-    image: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=200&h=200&fit=crop&crop=face",
-    bio: "Expanding Akhuwat's presence in New York and Florida through strategic initiatives.",
-    social: {
-      linkedin: "#",
-      twitter: "#",
-      email: "mushtaq@akhuwat.org",
-    },
-  },
+  // {
+  //   id: 5,
+  //   name: "Mr. Yuman Pirzada",
+  //   role: "Director",
+  //   image: "/dfsdf-1.jpg",
+  //   bio: "Leading financial operations and ensuring transparency in all our lending processes.",
+  //   social: {
+  //     linkedin: "#",
+  //     twitter: "#",
+  //     email: "yuman@akhuwat.org",
+  //   },
+  // },
+  // {
+  //   id: 6,
+  //   name: "Mr. Shahid Jamil",
+  //   role: "Ambassador, Maryland",
+  //   image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face",
+  //   bio: "Representing Akhuwat in Maryland and building community partnerships in the region.",
+  //   social: {
+  //     linkedin: "#",
+  //     twitter: "#",
+  //     email: "shahid@akhuwat.org",
+  //   },
+  // },
+  // {
+  //   id: 7,
+  //   name: "Mr. Mian Mushtaq Javed",
+  //   role: "Ambassador, New York & Florida",
+  //   image: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=200&h=200&fit=crop&crop=face",
+  //   bio: "Expanding Akhuwat's presence in New York and Florida through strategic initiatives.",
+  //   social: {
+  //     linkedin: "#",
+  //     twitter: "#",
+  //     email: "mushtaq@akhuwat.org",
+  //   },
+  // },
 ]
 
 const TeamSection = () => {

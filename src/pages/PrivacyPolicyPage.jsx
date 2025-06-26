@@ -52,7 +52,7 @@ const PrivacyPolicyPage = () => {
   return (
     <>
       <HeroImgSection
-        imageUrl="https://i.postimg.cc/zGZsSdqf/akhuwatfoundationbusinessloan3.jpg"
+        imageUrl="/integrated_loan_app_02-Crop.webp"
         text="Privacy Policy"
       />
 
@@ -147,12 +147,12 @@ const PrivacyPolicyPage = () => {
                   Email Privacy Team
                 </motion.a>
                 <motion.a
-                  href="tel:+923354571620"
+                  href="tel:+923281969250"
                   className="bg-white/10 border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all duration-300"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Call: +923354571620
+                  Call: +92 328 1969250
                 </motion.a>
               </div>
             </div>

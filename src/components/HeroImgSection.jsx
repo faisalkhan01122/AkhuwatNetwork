@@ -3,18 +3,18 @@ import { motion } from "framer-motion"
 
 const HeroImgSection = ({ imageUrl, text }) => {
   return (
-    <section className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[500px] overflow-hidden">
+    <section className="relative w-full h-[100vh]  md:h-[80vh] overflow-hidden">
       <motion.div
         className="absolute inset-0"
         initial={{ scale: 1.1 }}
         animate={{ scale: 1 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
       >
-        <div className="relative w-full h-full">
+        <div className="relative w-full h-full ">
           <img
             src={imageUrl || "/placeholder.svg?height=500&width=1200"}
             alt="Hero Background"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full  object-bottom"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/70"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30"></div>
@@ -93,7 +93,7 @@ const HeroImgSection = ({ imageUrl, text }) => {
             transition={{ duration: 0.8, delay: 1.1 }}
           >
             <motion.button
-              className="group bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold px-8 py-3 rounded-full shadow-2xl transition-all duration-300 relative overflow-hidden"
+              className="group bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold px-5 py-2 md:px-8 md:py-3 rounded-full shadow-2xl transition-all duration-300 relative overflow-hidden"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -101,7 +101,7 @@ const HeroImgSection = ({ imageUrl, text }) => {
             </motion.button>
             <motion.a
               href="tel:+923354571620"
-              className="group bg-white/10 hover:bg-white/20 border-2 border-white/30 hover:border-white/50 text-white px-8 py-3 rounded-full backdrop-blur-md transition-all duration-300 flex items-center gap-2"
+              className="group bg-white/10 hover:bg-white/20 border-2 border-white/30 hover:border-white/50 text-white px-4 py-1 md:px-8 md:py-3 rounded-full backdrop-blur-md transition-all duration-300 flex items-center gap-2"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >

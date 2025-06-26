@@ -5,6 +5,8 @@ import ContactUsPage from './pages/ContactUsPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import AboutUsPage from './pages/AboutUsPage';
 import LoanServicesPage from './pages/LoanServicesPage';
+import TermsConditionsPage from './pages/TermsConditionsPage';
+import DisclaimerPage from './pages/DisclaimerPage';
 
 
 
@@ -19,22 +21,30 @@ const router = createBrowserRouter([
 				
 			},
 			{
-				path:'loan-services',
+				path:'/loan-services',
 				element:<LoanServicesPage/>
 			},
 			{
-				path:'about-us',
+				path:'/about-us',
 				element:<AboutUsPage/>
 			},
 			
 			{
-				path:'privacy-policy',
+				path:'/privacy-policy',
 				element:<PrivacyPolicyPage/>
 			},
 			{
-				path:'contact-us',
+				path:'/contact-us',
 				element:<ContactUsPage/>
 			},
+			  {
+        path: "/terms-and-conditions",
+        element: <TermsConditionsPage />,
+      },
+      {
+        path: "/disclaimer",
+        element: <DisclaimerPage />,
+      },
 			
 		],
 	},

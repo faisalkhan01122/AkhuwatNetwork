@@ -1,4 +1,3 @@
-"use client"
 
 import { motion } from "framer-motion"
 
@@ -120,7 +119,7 @@ const CollaboratingPartnersSection = () => {
         <img
           src={partner.logo}
           alt={partner.name}
-          className="h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-500"
+          className="h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
         />
       </motion.div>
 

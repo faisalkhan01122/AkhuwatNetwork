@@ -3,7 +3,7 @@ import LoanCard from "../components/LoanCard"
 
 const cards = [
   {
-    img: "https://i.postimg.cc/CLqy8yTt/akhuwatfoundationbusinessloan2.jpg",
+    img: "/model-house-pile-coins-businessman-holding-coins-real-estate-investment-ideas-home-loans-new-home-loans-lowinterest-rates-homes-1-1-1.webp",
     title: "Akhuwat Loan",
     linkText: "Apply Online",
     linkUrl: "#",
@@ -11,7 +11,7 @@ const cards = [
       "Contact the Akhuwat Head Office Contact Number. When you make a call to Akhuwat Helpline, officials will guide you or contact via WhatsApp.",
   },
   {
-    img: "https://i.postimg.cc/cCtzf3jY/akhuwatfoundationpersonalloans.jpg",
+    img: "/Student-Loan.png",
     title: "Akhuwat Student Loan",
     linkText: "Learn More",
     linkUrl: "#",
@@ -19,7 +19,7 @@ const cards = [
       "The Akhuwat Foundation offers student loans to make education more affordable and accessible. Covers tuition fees, books, and materials.",
   },
   {
-    img: "https://i.postimg.cc/1RTh4mTw/akhuwatfoundationeasyloanapproval.jpg",
+    img: "/thesiliconreview-get-behind-the-wheel.webp",
     title: "Flexible Repayment",
     linkText: "How It Works",
     linkUrl: "#",

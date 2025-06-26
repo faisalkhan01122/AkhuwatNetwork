@@ -86,7 +86,7 @@ const ServicesCarousel = () => {
                 <img
                   src={service.src}
                   alt={service.alt}
-                  className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-64 object-center transform group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition duration-300"></div>
                 <div className="absolute bottom-4 left-4 text-white bg-green-600 px-3 py-1 rounded-md text-sm font-medium shadow-md group-hover:bg-green-700 transition-all duration-300">

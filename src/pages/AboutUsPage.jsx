@@ -8,7 +8,7 @@ import TestimonialsSection from "../section/TestimonialsSection"
 const AboutUsPage = () => {
   return (
     <>
-      <HeroImgSection imageUrl="https://i.postimg.cc/zGZsSdqf/akhuwatfoundationbusinessloan3.jpg" text="About Us" />
+      <HeroImgSection imageUrl="/maxresdefault.jpg" text="About Us" />
 
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12">
@@ -88,7 +88,7 @@ const AboutUsPage = () => {
           >
             <div className="relative overflow-hidden rounded-2xl shadow-2xl hover-lift">
               <motion.img
-                src="https://i.postimg.cc/1RTh4mTw/akhuwatfoundationeasyloanapproval.jpg"
+                src="/depositphotos_153233456-stock-photo-who-we-are-concept-on.jpg"
                 alt="Loan Services Akhuwat"
                 className="w-full h-auto object-cover transition-transform duration-700 hover:scale-105"
                 whileHover={{ scale: 1.05 }}
@@ -186,9 +186,9 @@ const AboutUsPage = () => {
             <div className="sticky top-8">
               <div className="relative overflow-hidden rounded-2xl shadow-2xl hover-lift">
                 <motion.img
-                  src="https://i.postimg.cc/cCtzf3jY/akhuwatfoundationpersonalloans.jpg"
+                  src="https://www.idfcfirstbank.com/content/dam/idfcfirstbank/images/blog/finance/benefits-of-microfinance-the-microfinance-industry-240X320.jpg"
                   alt="Personal Loans - Akhuwat Foundation"
-                  className="w-full h-auto object-cover transition-transform duration-700"
+                  className="w-full h-auto object-center transition-transform duration-700"
                   whileHover={{ scale: 1.05 }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-green-900/50 to-transparent"></div>

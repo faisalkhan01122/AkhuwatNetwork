@@ -99,9 +99,9 @@ const AkhuwatTrustSection = () => {
           >
             <div className="relative overflow-hidden rounded-3xl shadow-2xl hover-lift">
               <img
-                src="https://i.postimg.cc/xCChTh36/akhuwatfoundationhome.jpg"
+                src="/Our-Mission.jpg"
                 alt="Akhuwat Foundation"
-                className="w-full h-[500px] object-contain"
+                className="w-full h-[500px] object-top"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
 

@@ -6,7 +6,7 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa"
 const ContactUsPage = () => {
   return (
     <>
-      <HeroImgSection imageUrl="https://i.postimg.cc/zGZsSdqf/akhuwatfoundationbusinessloan3.jpg" text="Contact Us" />
+      <HeroImgSection imageUrl="/contactus.jpg" text="Contact Us" />
 
       {/* Contact Images Section */}
       <section className="max-w-7xl mx-auto px-4 py-16">
@@ -19,7 +19,7 @@ const ContactUsPage = () => {
             viewport={{ once: true }}
           >
             <img
-              src="https://i.postimg.cc/CLqy8yTt/akhuwatfoundationbusinessloan2.jpg"
+              src="/bussnsloa.jpg"
               alt="Business Loan - Akhuwat Foundation"
               className="w-full h-64 md:h-80 object-cover transition-transform duration-700 hover:scale-105"
             />
@@ -44,7 +44,7 @@ const ContactUsPage = () => {
             viewport={{ once: true }}
           >
             <img
-              src="https://i.postimg.cc/1tjTgBWs/akhuwatfoundationhomeloan.jpg"
+              src="/homeloaan.jpg"
               alt="Home Loan - Akhuwat Foundation"
               className="w-full h-64 md:h-80 object-cover transition-transform duration-700 hover:scale-105"
             />
@@ -84,18 +84,18 @@ const ContactUsPage = () => {
               {
                 icon: <FaPhone />,
                 title: "Call Us",
-                info: "+92 335 4571620",
+                info: "+92 328 1969250",
                 description: "Available 24/7 for your queries",
                 color: "from-blue-500 to-blue-600",
-                link: "tel:+923354571620",
+                link: "tel:+923281969250",
               },
               {
                 icon: <FaWhatsapp />,
                 title: "WhatsApp",
-                info: "+92 333 4576120",
+                info: "+92 328 1969250",
                 description: "Quick support via WhatsApp",
                 color: "from-green-500 to-green-600",
-                link: "https://wa.me/923334576120",
+                link: "https://wa.me/+923281969250",
               },
               {
                 icon: <FaEnvelope />,
@@ -161,7 +161,7 @@ const ContactUsPage = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <form action="https://akhuwat.network/contact-submit" method="POST" className="space-y-6">
+            <form action="submit" method="POST" className="space-y-6">
               <input type="hidden" name="_token" value="cSdACfwvRRbJpn1dO88IcqHwYIIlGWVmzRTlhvGT" autoComplete="off" />
 
               <div className="grid md:grid-cols-2 gap-6">
